@@ -1,0 +1,222 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins";
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
+.museo-bold {
+    font-family: "MuseoModerno";
+    font-weight: 700;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-checkbox:checked + .open-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -320px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #B9DAF3;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar ul li a.chat-title {
+    font-family: "MuseoModerno";
+    font-size: 50px;
+    font-weight: 700;
+    display: block;
+}
+
+.ia-color1 {
+    color: #246EDE;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #003366;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+    width: 300px;
+    height: 100%;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-icon svg path {
+    stroke: #003366;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar .close-icon {
+    display: block;
+}
+#testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+.testimonial-heading h4{
+    font-size: 100px;
+    color: #000000;
+    margin: 0;
+    font-family: "MuseoModerno";
+    font-weight: 700;
+    text-align: center;
+}
+.testimonial-heading h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.ia-color {
+    color: #003366;
+    font-family: "MuseoModerno";
+    font-weight: 700;
+}
+.testimonial-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.testimonial-box{
+    width:500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.profile-img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.reviews{
+    color: #f9d71c;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 200px;
+}
+.client-comment p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+.testimonial-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+ 
+@media(max-width:1060px){
+    .testimonial-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .testimonial-box{
+        width:100%;
+    }
+    .testimonial-heading h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}

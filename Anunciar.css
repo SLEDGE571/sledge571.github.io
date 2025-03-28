@@ -1,0 +1,396 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
+.museo-bold {
+    font-family: "MuseoModerno";
+    font-weight: 700;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-checkbox:checked + .open-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -320px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #F5D3AC;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+    z-index: 999;
+}
+
+#menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+#menu-toggle:checked ~ .sidebar .close-icon {
+    display: block;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar ul li a.chat-title {
+    font-family: "MuseoModerno";
+    font-size: 50px;
+    font-weight: 700;
+    display: block;
+}
+
+.ia-color1 {
+    color: #F0B13B ;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #835500;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+    width: 300px;
+    height: 100%;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.sidebar .close-icon{
+    z-index: 1001;   
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-icon svg path {
+    stroke: #835500;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar .close-icon {
+    display: block;
+}
+
+.Uan {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 900;
+}
+
+.logo-uan {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-uan:hover {
+    transform: scale(1.1);
+}
+
+header {
+    background: url('IMAGENES/Fondo\ xplorar.png') no-repeat center/cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.contenedor1 {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.tituloch h4 {
+    font-size: 100px;
+    color: #F0B13B;
+    margin: 0;
+    font-family: 'MuseoModerno';
+    font-weight: 700;
+}
+
+.ia-color {
+    color: #835500; 
+}
+
+.encu h3 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #835500;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+#containercarru {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-list .card-item .card-link{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FADFC3;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    margin: 0 auto 50px;
+}
+
+.card-list .card-item .card-link:hover{
+    border-color: #F0B13B;
+
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link {
+    padding-top: 10px; /* Ajusta este valor si el padding es muy grande */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio entre la imagen y el contenido */
+}
+
+
+.card-list .card-link .badge{
+    color: #835500;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 16px 0 18px;
+    background: #F0B13B;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-tittle{
+    font-size: 19px;
+    color: #835500;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-list .card-link .card-tittle{
+    font-size: 15px;
+}
+
+.card-list .card-link .card-button{
+    height: 35px;
+    width: 35px;
+    color: #835500;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #835500;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list .card-link:hover .card-button{
+    color: #835500;
+    background: #F0B13B;
+}
+
+#containercarru1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card-list1 .card-item1{
+    list-style: none;
+}
+
+.card-list1 .card-item1 .card-link1{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FADFC3;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    margin: 0 auto 50px;
+}
+
+.card-list1 .card-item1 .card-link1:hover{
+    border-color: #F0B13B;
+
+}
+
+.card-list1 .card-link1 .card-image1{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list1 .card-link1 {
+    padding-top: 10px; /* Ajusta este valor si el padding es muy grande */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espacio entre la imagen y el contenido */
+}
+
+
+.card-list1 .card-link1 .badge1{
+    color: #835500;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 16px 0 18px;
+    background: #F0B13B;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list1 .card-link1 .card-tittle1{
+    font-size: 19px;
+    color: #835500;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-list1 .card-link1 .card-tittle1{
+    font-size: 15px;
+}
+
+.card-list1 .card-link1 .card-button1{
+    height: 35px;
+    width: 35px;
+    color: #835500;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid #835500;
+    transform: rotate(-45deg);
+    transition: 0.4s ease;
+}
+
+.card-list1 .card-link1:hover .card-button1{
+    color: #835500;
+    background: #F0B13B;
+}
+
+.card-wrapper1 {
+    width: 90%;
+    max-width: 1000px;
+    scroll-snap-type: x mandatory; /* Hace que el scroll sea suave */
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: center /* Mejora la experiencia en dispositivos táctiles */
+}
+
+.card-list1 {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: max-content;
+    margin: 0 auto; /* Centra el carrusel en la página */
+    justify-content: center;
+    align-items: center; /* Centra las imágenes verticalmente */
+    transform: translateX(8.5%);
+}
+
+.card-item1 {
+    flex: 0 0 auto;
+    min-width: 300px; /* Asegura que cada tarjeta sea completamente visible */
+    scroll-snap-align: center;
+}
+
+/* Oculta la barra de desplazamiento en navegadores modernos */
+.card-wrapper1::-webkit-scrollbar {
+    display: none;
+}
+
+.card-wrapper1 {
+    scrollbar-width: none; /* Para Firefox */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra el carrusel dentro del contenedor */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+}
+
+.legal p{
+    font-size: 15px;
+    color: #0000005b;
+    margin: 0 auto;
+    margin-left: 70px;
+    text-align: center;
+    font-family: 'Poppins';
+	font-weight: 400;
+}

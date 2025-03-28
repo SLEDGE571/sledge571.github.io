@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
+.museo-bold {
+    font-family: "MuseoModerno";
+    font-weight: 700;
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.menu-checkbox:checked + .open-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar {
+    position: fixed;
+    left: -320px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #F3B3B5;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar ul li a.chat-title {
+    font-family: "MuseoModerno";
+    font-size: 50px;
+    font-weight: 700;
+    display: block;
+}
+
+.ia-color1 {
+    color: #FF474A;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #A80104;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+    width: 300px;
+    height: 100%;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.close-icon svg path {
+    stroke: #A80104;
+}
+
+.menu-checkbox:checked + .open-icon + .sidebar .close-icon {
+    display: block;
+}
+
+header {
+    background: url('IMAGENES/Fondo%20guIAr.png') no-repeat center/cover;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contenedor principal */
+.contenedor1 {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.tituloch h4 {
+    font-size: 100px;
+    color: #FF474A;
+    margin: 0;
+    font-family: 'MuseoModerno';
+    font-weight: 700;
+}
+
+.ia-color {
+    color: #A80104; 
+}
+
+.Bienve h1 {
+    font-size: 40px;
+    color: #A80104;
+    margin: 20px 0;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.encu h3 {
+    font-size: 24px;
+    font-weight: 300;
+    color: #A80104;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+.botonch {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 50px;
+    background: #A80104;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.boton:hover {
+    background: #FF474A;
+}
+
+.legal {
+    font-size: 15px;
+    color: #0000005b;
+    margin-top: 150px;
+    font-family: 'Poppins';
+	font-weight: 400;
+}
